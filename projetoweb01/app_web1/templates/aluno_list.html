@@ -2,8 +2,23 @@
 <html>
 <head>
     <title>Lista de Alunos</title>
-    <!-- Adicione os links para os arquivos CSS do Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -27,8 +42,9 @@
             </tbody>
         </table>
     </div>
-    
-    <!-- Adicione os scripts do Bootstrap -->
+    <div class="btn-container">
+        <a href="{% url 'index' %}" class="btn btn-secondary">Voltar</a>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>

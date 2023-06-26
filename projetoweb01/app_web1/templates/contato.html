@@ -4,16 +4,34 @@
     <title>Contato</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Estilos adicionais personalizados */
         body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+
+        .form-container {
+            background-color: #ffffff;
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Entre em Contato</h1>
-        <p>Use o formulário abaixo para entrar em contato conosco:</p>
+        <p>Utilize esse formulário para entrar em contato:</p>
 
         <form method="POST" action="{% url 'contato' %}">
             {% csrf_token %}
@@ -32,7 +50,10 @@
                 <textarea class="form-control" id="mensagem" name="mensagem"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <div class="btn-container">
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                <a href="{% url 'index' %}" class="btn btn-secondary">Voltar</a>
+            </div>
         </form>
     </div>
 

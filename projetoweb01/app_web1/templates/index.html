@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Web Avançado</title>
-    <!-- Adicione os links para os arquivos CSS do Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <style>
         .header {
@@ -39,8 +38,7 @@
             color: #ffffff;
             padding: 10px 20px;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -48,7 +46,7 @@
     <div class="header">
         <h1>Web Avançado</h1>
     </div>
-    <a href="{% url 'contato' %}" class="btn-contato">Contato</a>
+    <a href="{% url 'contato' %}" class="btn btn-contato">Contato</a>
     <div class="container">
         <h2 class="text-center">Nome do Aluno</h2>
         <ul class="student-list">
@@ -59,8 +57,6 @@
             {% endfor %}
         </ul>
     </div>
-    
-    <!-- Adicione os scripts do Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
